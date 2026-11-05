@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestor de Tarefas</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body class="day">
+
+    <!-- Login -->
+    <div id="login-container">
+
+        <h1>Gestor de Tarefas</h1>
+
+        <p>A sua organização começa aqui.</p>
+
+        <form id="login-form">
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Introduza o seu nome"
+            >
+
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <p id="login-error" class="message"></p>
+
+    </div>
+
+
+    <!-- Aplicação -->
+    <div id="app-container" hidden>
+
+        <header>
+
+            <h1>Gestor de Tarefas</h1>
+
+            <button id="theme-btn">☀️ / 🌙 Modo noturno</button>
+
+            <p id="login-message"></p>
+
+            <button id="logout">Sair</button>
+
+        </header>
+
+
+        <!-- Data e horários pelo mundo -->
+        <div class="top-cards">
+
+            <!-- Data e hora -->
+            <div class="card">
+
+                <h2>Data e Hora</h2>
+
+                <p id="current-date"></p>
+
+                <p id="current-time"></p>
+
+            </div>
+
+
+            <!-- Horários pelo Mundo -->
+        <div class="card">
+            <h2>Hora e Temperatura pelo Mundo</h2>
+
+    <input
+        type="text"
+        id="timezone"
+        placeholder="Escreva o nome de uma cidade..."
+    >
+
+    <button id="consult-time">Consultar</button>
+
+    <p id="time-result"></p>
+
+    </div>
+
+        </div>
+
+
+        <!-- Adicionar tarefas e resumo -->
+    
+    <div class="top-cards">
+
+        <!-- Adicionar tarefas -->
+        <section>
+
+        <h2>Adicionar Nova Tarefa</h2>
+
+        <form id="task-form">
+
+            <input
+                type="text"
+                id="task-input"
+                name="task"
+                placeholder="Escreva uma tarefa..."
+            >
+
+            <button type="submit">Adicionar Tarefa</button>
+
+        </form>
+
+        <p id="task-message" class="message"></p>
+
+    </section>
+
+
+        <!-- Estatísticas -->
+        <section>
+
+            <h2>Resumo das Tarefas</h2>
+
+            <p>Tarefas ativas: <span id="active-count">0</span></p>
+
+            <p>Tarefas concluídas: <span id="completed-count">0</span></p>
+
+            <p>Total de tarefas: <span id="total-count">0</span></p>
+
+        </section>
+
+    </div>
+
+        <!-- Lista de tarefas -->
+        <section>
+
+            <h2>As Minhas Tarefas</h2>
+
+            <div id="filters">
+
+                <button class="filter-btn active" data-filter="all">Todas</button>
+
+                <button class="filter-btn" data-filter="active">Ativas</button>
+
+                <button class="filter-btn" data-filter="completed">Concluídas</button>
+
+            </div>
+
+            <ul id="task-list"></ul>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
